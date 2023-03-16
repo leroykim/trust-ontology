@@ -18,7 +18,9 @@ class TrustScoreFactory:
         behavior_dist: list[float],
         org_identity_trust: float,
     ):
-        print(len(ranges), len(identity_dist), len(behavior_dist))
+        print(
+            f"Length of ranges: {len(ranges)} identity_dist: {len(identity_dist)} behavior_dist: {len(behavior_dist)}"
+        )
         if len(identity_dist) != len(ranges):
             raise ValueError("The length of identity_dist must be the same as the length of ranges.")
         elif len(behavior_dist) != len(ranges):
@@ -43,7 +45,9 @@ class TrustScoreFactory:
         identity_trust = self.__generate_random_float(self.__ranges, identity_weights)
         behavior_trust = self.__generate_random_float(self.__ranges, behavior_weights)
         data = {"user": user_id, "identity_trust": identity_trust, "behavior_trust": behavior_trust}
-        print(len(user_id), len(identity_trust), len(behavior_trust))
+        print(
+            f"Number of rows of user_id: {len(user_id)} identity_trust: {len(identity_trust)} behavior_trust: {len(behavior_trust)}"
+        )
         return pd.DataFrame.from_dict(data)
 
     def __generate_random_float(self, ranges: list, weights: list):

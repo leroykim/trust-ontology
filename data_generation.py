@@ -44,3 +44,87 @@ generation.build_trust_graph(
     destination_dir="result",
     file_name="UHH_OH",
 )
+
+# UHH_OL
+generation.build_trust_graph(
+    model_path=MODEL_PATH,
+    n_user=N_USER,
+    ranges=RANGES,
+    identity_dist=IDENTITY_DIST_HIGH,
+    behavior_dist=BEHAVIOR_DIST_HIGH,
+    org_identity_trust=ORG_IDENTITY_LOW,
+    destination_dir="result",
+    file_name="UHH_OL",
+)
+
+# UHL_OH
+generation.build_trust_graph(
+    model_path=MODEL_PATH,
+    n_user=N_USER,
+    ranges=RANGES,
+    identity_dist=IDENTITY_DIST_HIGH,
+    behavior_dist=BEHAVIOR_DIST_LOW,
+    org_identity_trust=ORG_IDENTITY_HIGH,
+    destination_dir="result",
+    file_name="UHL_OH",
+)
+
+# UHL_OL
+generation.build_trust_graph(
+    model_path=MODEL_PATH,
+    n_user=N_USER,
+    ranges=RANGES,
+    identity_dist=IDENTITY_DIST_HIGH,
+    behavior_dist=BEHAVIOR_DIST_LOW,
+    org_identity_trust=ORG_IDENTITY_LOW,
+    destination_dir="result",
+    file_name="UHL_OL",
+)
+
+# ULH_OH
+generation.build_trust_graph(
+    model_path=MODEL_PATH,
+    n_user=N_USER,
+    ranges=RANGES,
+    identity_dist=IDENTITY_DIST_LOW,
+    behavior_dist=BEHAVIOR_DIST_HIGH,
+    org_identity_trust=ORG_IDENTITY_HIGH,
+    destination_dir="result",
+    file_name="ULH_OH",
+)
+
+# ULH_OL
+generation.build_trust_graph(
+    model_path=MODEL_PATH,
+    n_user=N_USER,
+    ranges=RANGES,
+    identity_dist=IDENTITY_DIST_LOW,
+    behavior_dist=BEHAVIOR_DIST_HIGH,
+    org_identity_trust=ORG_IDENTITY_LOW,
+    destination_dir="result",
+    file_name="ULH_OL",
+)
+
+# ULL_OH
+generation.build_trust_graph(
+    model_path=MODEL_PATH,
+    n_user=N_USER,
+    ranges=RANGES,
+    identity_dist=IDENTITY_DIST_LOW,
+    behavior_dist=BEHAVIOR_DIST_LOW,
+    org_identity_trust=ORG_IDENTITY_HIGH,
+    destination_dir="result",
+    file_name="ULL_OH",
+)
+
+# ULL_OL
+generation.build_trust_graph(
+    model_path=MODEL_PATH,
+    n_user=N_USER,
+    ranges=RANGES,
+    identity_dist=IDENTITY_DIST_LOW,
+    behavior_dist=BEHAVIOR_DIST_LOW,
+    org_identity_trust=ORG_IDENTITY_LOW,
+    destination_dir="result",
+    file_name="ULL_OL",
+)

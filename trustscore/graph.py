@@ -20,7 +20,7 @@ class TrustGraphFactory:
     def __set_model(self, graph: Graph, model_path: str):
         graph.parse(model_path, format="n3")
         graph.bind("trust", TRUST_IRI)
-        print(f"Model has {len(graph)} triples.")
+        # print(f"Model has {len(graph)} triples.")
 
     def __build_user_trust_graph(self, graph: Graph, user_trustscore_df: pd.DataFrame):
         organization = self.__organizationUri("x")

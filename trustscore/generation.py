@@ -15,6 +15,7 @@ def build_trust_graph(
     )
 
     trust_score_df = trust_score_factory.generate_user_trust()
+    trust_score_df.to_csv(f"{destination_dir}/{file_name}.csv", index=False)
 
     trust_graph_factory = graph.TrustGraphFactory(model_path=model_path, destination_dir=destination_dir)
     trust_graph_factory.build_trust_graph(trust_score_df=trust_score_df, file_name=f"{file_name}.ttl")
